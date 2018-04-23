@@ -41,7 +41,7 @@ class BikeMap extends Component {
   }
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     const markers = this.state.markers || []
     return (
       <div style={{width: '100vw', height: '100vh'}}>
@@ -51,7 +51,7 @@ class BikeMap extends Component {
           defaultCenter={this.props.center}>
           {markers.map((marker, index) => (
               <Marker
-                key={index}
+                key={marker.id}
                 position={marker.center}
                 onClick={() => this.onMarkerClick(marker)}>
                 
